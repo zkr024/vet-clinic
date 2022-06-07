@@ -48,7 +48,8 @@ select count(*) from animals where escape_attempts = 0;
 select avg(weight_kg) from animals;
 
 -- Who escapes the most
-select name from animals where escape_attempts =(select MAX(escape_attempts) from animals);
+select neutered, count(escape_attempts) from animals
+group by neutered;
 
 -- Minimum and Maximum weight
 select min(weight_kg), max(weight_kg) from animals group by species;
