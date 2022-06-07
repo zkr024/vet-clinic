@@ -3,10 +3,12 @@
 CREATE DATABASE vet_clinic;
 
 CREATE TABLE animals(
-    id int PRIMARY KEY NOT NULL,
+    id serial PRIMARY KEY NOT NULL,
     name varchar(100) NOT NULL,
     date_of_birth date NOT NULL,
     escape_attempts int NOT NULL,
     neutered boolean NOT NULL,
     weight_kg decimal NOT NULL
 );
+
+ALTER TABLE animals ADD species varchar(100);
