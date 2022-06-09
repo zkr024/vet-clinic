@@ -61,3 +61,30 @@ where name in ('Charmander','Squirtle','Blossom')
 
 update animals set owner_id = 5
 where name in ('Angemon','Boarmon')
+
+--Vets table
+create table vets (
+    id serial primary key,
+    name varchar(100) not null,
+    age int not null,
+    date_of_graduation date,
+);
+
+--join table - specializations
+create table specializations (
+    species_id int,
+    vets_id int,
+    primary key (species_id, vets_id),
+    foreign key (species_id) references species (id),
+    foreign key (vets_id) references vets (id)
+);
+
+-- Join table - Visits
+create table visits (
+    animals_id int,
+    vets_id int,
+    date_of_visit DATE,
+    primary key (animals_id, vets_id, date_of_visit),
+    foreign key (animals_id) references animals (id),
+    foreign key (vets_id) references vets (id)
+);
