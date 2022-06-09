@@ -15,6 +15,8 @@ copy the Microverse [curriculum-template-databases](https://github.com/microvers
 - Twitter: [@twitterhandle](https://twitter.com/zkr024)
 - LinkedIn: [LinkedIn](www.linkedin.com/in/oscar-bermudez-07908222a)
 
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=zkr024&show_icons=true&locale=en" alt="zkr024" /></p>
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
