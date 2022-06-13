@@ -88,3 +88,18 @@ create table visits (
     foreign key (animals_id) references animals (id),
     foreign key (vets_id) references vets (id)
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+--SELECT COUNT(*) FROM visits where animal_id = 4; -Execution time 168.694 ms
+create index animals_id_index on visits(animals_id);
+--New execution time 39.944 ms
+
+--SELECT * FROM visits where vet_id = 2; -Execution time 168.694 ms 330.095 ms
+create index vets_id_index on visits(vets_id);
+--New execution time 225.550 ms
+
+--SELECT * FROM owners where email = 'owner_18327@mail.com'; -Execution time 168.694 ms 139.164 ms
+create index email_index on owners(email);
+--New execution time 0.117 ms
