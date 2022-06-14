@@ -76,7 +76,3 @@ CREATE TABLE "joinTable" (
     foreign key(treatment_id) references treatments(id),
     primary key(medical_histories_id, treatment_id)
 );
-
-
---SELECT * FROM owners where email = 'owner_18327@mail.com'; -Execution time 168.694 ms 139.164 ms
-create index email_index on owners(email);
